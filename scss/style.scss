@@ -1424,27 +1424,18 @@ footer {
 .k,
 .n,
 .q,
-.t,
-.f,
-.i,
-.l,
-.o,
-.r,
-.u {
+.t {
   color: $main;
   font-weight: 700;
   font-size: 1.1em;
 }
-.f,
-.i,
-.l,
-.o,
-.r,
-.u {
-  &::after {
-    content: "K";
-  }
+
+.f,.i,.l,.o,.r,.u{
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
 }
+
 @media (max-width: 851px) {
   .co {
     padding: 20px 0;
