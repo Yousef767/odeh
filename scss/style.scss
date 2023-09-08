@@ -214,7 +214,7 @@ nav.color {
   width: fit-content;
   font-size: 1.1em;
 }
-.link {
+.link,.lk {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -222,6 +222,9 @@ nav.color {
   color: #fff;
   padding: 7px 25px;
   transition: 0.2s;
+}
+.lk{
+  font-size: 1.4em;
 }
 .link.active {
   border-radius: 5px;
@@ -325,6 +328,10 @@ nav.color {
   width: 100%;
   height: 100vh;
   position: relative;
+  background-image: url(../media/Home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: $black;
   header {
     position: absolute;
   }
@@ -336,6 +343,16 @@ nav.color {
     object-fit: cover;
     z-index: -1;
   }
+}
+.dashboard {
+  @include flex();
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../media/Home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: $black;
 }
 .sb {
   height: 70vh;
@@ -1296,7 +1313,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 270px;
   height: auto;
   .memberImg {
     @include flex();
@@ -1341,15 +1358,11 @@ footer {
       font-weight: 700;
       color: $main;
       font-size: 1.7em;
-      white-space: nowrap;
-      text-align: center;
     }
     &:nth-child(2) {
       font-weight: 300;
       color: #fff;
       font-size: 1.1em;
-      white-space: nowrap;
-      text-align: center;
     }
     &:nth-child(3) {
       font-weight: 500;
@@ -1388,7 +1401,14 @@ footer {
       color: #fff;
       font-weight: 300;
     }
+    .hcen{
+      text-align: center;
+      padding-bottom: 10px;
+    }
   }
+}
+.bac{
+  background-color: #333333;
 }
 form {
   display: flex;
@@ -1440,6 +1460,11 @@ form {
     background-color: rgba(2, 136, 166, 0.14);
     color: #fff;
     font-size: 1.1em;
+  }
+  .send{
+    .login{
+      margin:  0 auto;
+    }
   }
   span {
     position: absolute;
@@ -1513,6 +1538,7 @@ form {
   }
 }
 .send {
+  width: 100%;
   input {
     width: 150px;
     height: 40px;
@@ -1525,6 +1551,10 @@ form {
     font-size: 1em;
     cursor: pointer;
   }
+}
+.send.login{
+  @include flex();
+  padding-top: 10px;
 }
 .jop {
   max-width: 350px;
@@ -1592,6 +1622,9 @@ form {
   .dataCard {
     width: 100%;
     padding: 30px 20px;
+  }
+  .bac{
+    width: calc(100% - 40px);
   }
 }
 
