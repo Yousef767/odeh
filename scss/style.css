@@ -205,7 +205,7 @@ nav.color {
   font-size: 1.1em;
 }
 
-.link, .lk {
+.link {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -213,10 +213,6 @@ nav.color {
   color: #fff;
   padding: 7px 25px;
   transition: 0.2s;
-}
-
-.lk {
-  font-size: 1.4em;
 }
 
 .link.active {
@@ -329,10 +325,6 @@ nav.color {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url(../media/Home.jpg);
-  background-size: cover;
-  background-position: center;
-  background-color: #2b2b2b;
 }
 .home header {
   position: absolute;
@@ -345,19 +337,6 @@ nav.color {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
-}
-
-.dashboard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-image: url(../media/Home.jpg);
-  background-size: cover;
-  background-position: center;
-  background-color: #2b2b2b;
 }
 
 .sb {
@@ -965,6 +944,14 @@ footer {
   width: 100%;
   height: 60vh;
 }
+.img-con::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .img-con h1 {
   font-size: 3em;
   color: #fff;
@@ -972,6 +959,7 @@ footer {
   text-align: center;
   width: 100%;
   padding: 0 20px;
+  z-index: 3;
 }
 .img-con span {
   display: flex;
@@ -984,6 +972,7 @@ footer {
   width: 100%;
   padding: 0 20px;
   font-size: 1.7em;
+  z-index: 3;
 }
 .img-con span .location {
   display: block;
@@ -1400,7 +1389,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 270px;
+  width: 300px;
   height: auto;
 }
 .member .memberImg {
@@ -1444,6 +1433,9 @@ footer {
 }
 .memberData a img {
   width: 60%;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .memberData span {
   width: 100%;
@@ -1454,11 +1446,15 @@ footer {
   font-weight: 700;
   color: #008aa6;
   font-size: 1.7em;
+  white-space: nowrap;
+  text-align: center;
 }
 .memberData span:nth-child(2) {
   font-weight: 300;
   color: #fff;
   font-size: 1.1em;
+  white-space: nowrap;
+  text-align: center;
 }
 .memberData span:nth-child(3) {
   font-weight: 500;
@@ -1500,14 +1496,6 @@ footer {
   font-size: 0.8em;
   color: #fff;
   font-weight: 300;
-}
-.form header .hcen {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.bac {
-  background-color: #333333;
 }
 
 form {
@@ -1566,9 +1554,6 @@ form {
   background-color: rgba(2, 136, 166, 0.14);
   color: #fff;
   font-size: 1.1em;
-}
-.input .send .login {
-  margin: 0 auto;
 }
 .input span {
   position: absolute;
@@ -1646,9 +1631,6 @@ form {
   font-weight: 300;
 }
 
-.send {
-  width: 100%;
-}
 .send input {
   width: 150px;
   height: 40px;
@@ -1662,13 +1644,6 @@ form {
   font-weight: 600;
   font-size: 1em;
   cursor: pointer;
-}
-
-.send.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
 }
 
 .jop {
@@ -1739,9 +1714,6 @@ form {
   .dataCard {
     width: 100%;
     padding: 30px 20px;
-  }
-  .bac {
-    width: calc(100% - 40px);
   }
 }
 .dataRow {
